@@ -1,0 +1,30 @@
+﻿@model List<KutuphaneProject.Models.Kitaplar>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kitaplarımız </h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Tür</th>
+        <th>Kitap Adı </th>
+        <th>Yazar </th>
+    </tr>
+    @foreach(var k in Model)
+    {
+        <tr>
+            <td>
+                @k.Tur
+            </td>
+            <td>
+                @k.KitapAd
+            </td>
+            <td>
+                @k.Yazar
+            </td>
+        </tr>
+    }
+</table>
